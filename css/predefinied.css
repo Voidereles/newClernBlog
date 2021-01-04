@@ -1,0 +1,506 @@
+picture img {
+  width: 100%;
+}
+
+.container-fluid {
+  max-width: 1700px;
+}
+
+.font-body-xs {
+  font-size: 0.8rem;
+}
+
+.btn {
+  border-radius: 200px;
+  -webkit-transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-expand__more {
+  display: inline-block;
+  position: relative;
+  background: white;
+  font-size: 1.5rem;
+  -webkit-transition: 0.5s, color 0.2s;
+  transition: 0.5s, color 0.2s;
+  -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+          box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+  z-index: 2;
+  border-radius: 25px;
+  width: 128px;
+  cursor: pointer;
+  color: #14b8eb;
+  overflow: hidden;
+}
+
+.btn-expand__more::before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background: #00ace0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
+}
+
+.btn-expand__more:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-expand__more:hover::before {
+  left: 0;
+}
+
+.btn-expand__more-hidden {
+  display: none;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  left: -25px;
+  font-size: 1rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 38%;
+  z-index: 2;
+  display: inline-block;
+}
+
+.btn-expand__more-dots {
+  position: absolute;
+  font-size: 2rem;
+  -webkit-transform: translate(-50%, -71%);
+          transform: translate(-50%, -71%);
+  right: 5px;
+}
+
+.btn-expand--inversed .btn-expand__more {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-expand--inversed .btn-expand__more::before {
+  left: 0;
+}
+
+.btn-expand--inversed .btn-expand__more:hover {
+  color: #14b8eb;
+}
+
+.btn-expand--inversed .btn-expand__more:hover::before {
+  left: -100%;
+}
+
+.no-radius {
+  border-radius: 0 !important;
+}
+
+.font-increased {
+  font-size: 150%;
+}
+
+.font-size-doubled {
+  font-size: 200%;
+}
+
+.modal-open .modal {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 0 !important;
+}
+
+.modal-backdrop {
+  background: white;
+}
+
+.modal-backdrop.show {
+  opacity: 0.95;
+}
+
+.modal-content {
+  border-radius: 0.25rem;
+  padding: 0;
+  width: 100vw;
+  max-width: 800px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 320px;
+  background: transparent;
+}
+
+.modal-header, .modal-content, .modal-body, .modal-footer {
+  border: none;
+}
+
+.modal-dismiss {
+  background: transparent;
+  width: 72px;
+  height: 72px;
+  outline: none;
+  border: none;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-dismiss svg {
+  width: 48px;
+  height: 48px;
+}
+
+.modal-dismiss svg path {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.modal-dismiss:hover, .modal-dismiss:focus, .modal-dismiss:active {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.modal-dismiss:hover svg path {
+  fill: #66ba5a;
+}
+
+.modal-dismiss:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.text-highlight {
+  color: #14b8eb;
+  font-weight: 400 !important;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+}
+
+.textColor-green {
+  color: #66ba5a;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: transparent;
+  z-index: 10;
+  -webkit-transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+  transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+  transition: transform 150ms ease-out, font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+}
+
+.form__rules-confirm {
+  font-size: 1rem;
+}
+
+.focused .form-label,
+.form-label--onTop {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .75em;
+}
+
+.form-input {
+  position: relative;
+  padding: 12px 0px 5px 0;
+  width: 100%;
+  max-width: 270px;
+  outline: 0;
+  border: 0;
+  -webkit-transition: -webkit-box-shadow 150ms ease-out;
+  transition: -webkit-box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out, -webkit-box-shadow 150ms ease-out;
+  background-color: transparent;
+}
+
+.form-input:-internal-autofill-selected {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.form-label:hover {
+  cursor: text;
+}
+
+.form-input.filled {
+  -webkit-box-shadow: 0 2px 0 0 lightgreen;
+          box-shadow: 0 2px 0 0 lightgreen;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #14b8eb;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark::after {
+  left: 10px;
+  top: 5px;
+  width: 6px;
+  height: 13px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.accordion .card {
+  border: none;
+  background-color: transparent;
+}
+
+.accordion .card .card-header {
+  border-bottom-right-radius: 35px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion .card .card-header.collapsed {
+  background: #f3f7ff;
+  border-top-left-radius: 35px;
+}
+
+.accordion .card .card-header.collapsed .company-services__heading {
+  color: #66ba5a;
+}
+
+.accordion .card .card-header:not(.collapsed) {
+  background: #f3f7ff;
+}
+
+.accordion .card .card-header:not(.collapsed)::before {
+  left: 0;
+}
+
+.accordion .card .card-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 110%;
+  background: #66ba5a;
+  background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-bottom-right-radius: 35px;
+}
+
+.accordion .accordion .card:not(:first-of-type) .card-header:first-child {
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.accordion .card-body {
+  background-color: white;
+}
+
+.cookies {
+  position: fixed;
+  z-index: 9999;
+  max-width: 1700px;
+  width: calc(100% - 2rem);
+  height: 100px;
+  bottom: 1rem;
+  right: 0;
+  left: 50%;
+  border-radius: 200px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  padding: 1rem 3.5rem;
+  background-color: #8dce57;
+  background: #5cb65a;
+  background-image: linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
+  color: white;
+  font-size: 0.8rem;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cookies__message {
+  text-align: justify;
+  padding-right: 80px;
+  margin-bottom: 0;
+}
+
+.cookies__mobile-message {
+  display: none;
+  margin-bottom: 0;
+}
+
+.cookies a {
+  color: #357734;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.cookies a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.cookies__label-close {
+  border: none;
+  color: white;
+  background: transparent;
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  top: 50%;
+  cursor: pointer;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  background: #14b8eb;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cookies__label-close:hover {
+  background: #1093bc;
+}
+
+.cookies__label-close svg {
+  width: 32px;
+  height: 32px;
+}
+
+.cookies__label-close svg path {
+  fill: white;
+}
+
+.cookies__checkbox-close {
+  display: none;
+}
+
+.cookies__checkbox-close:checked + .cookies {
+  -webkit-transform: translateY(250px) translateX(-50%);
+          transform: translateY(250px) translateX(-50%);
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cookies {
+    height: 50px;
+    text-align: left;
+    padding: 0.5rem 50px 0.5rem 1.5rem;
+  }
+  .cookies__label-close {
+    width: 32px;
+    height: 32px;
+  }
+  .cookies__label-close svg {
+    width: 20px;
+    height: 20px;
+  }
+  .cookies__message {
+    display: none;
+  }
+  .cookies__mobile-message {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=predefinied.css.map */

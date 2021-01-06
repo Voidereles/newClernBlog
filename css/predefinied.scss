@@ -147,7 +147,7 @@ picture img {
 
         &--inversed {
 
-            .btn-expand {
+            &.btn-expand {
                 &__more {
                     color: white;
                     text-decoration: none;
@@ -186,7 +186,15 @@ picture img {
     font-size: 200%;
 }
 
+
+
 .modal {
+    top: 150%;
+
+    &.show {
+        top: 0;
+    }
+
     &-open .modal {
         display: flex !important;
         justify-content: center;
@@ -537,7 +545,21 @@ picture img {
     }
 }
 
+input:-internal-autofill-selected {
+    background: transparent;
+}
 
+.grid-span-3 {
+    grid-column: span 3 !important;
+}
+
+.grid-span-4 {
+    grid-column: span 4 !important;
+}
+
+.grid-span-6 {
+    grid-column: span 6 !important;
+}
 
 @media (min-width: 576px) {
     .modal-dialog {
@@ -568,5 +590,15 @@ picture img {
         &__mobile-message {
             display: inline-block;
         }
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-span-2 {
+        grid-column: span 2;
+    }
+
+    .grid-span-3 {
+        grid-column: span 2;
     }
 }

@@ -2,16 +2,13 @@ function headerOnScroll() {
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
-        console.log('jest' + window.pageYOffset);
         if (window.pageYOffset > 36) {
             $('.header .container-fluid').addClass('scrolled');
 
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("header").style.top = "16px";
-                console.log("16")
             } else {
                 document.getElementById("header").style.top = "-145px";
-                console.log("-145")
             }
             prevScrollpos = currentScrollPos;
         } else {

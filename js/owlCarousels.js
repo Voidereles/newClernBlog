@@ -14,13 +14,12 @@ $(function () {
         start();
     }
 
-
     function buildProgressBar() {
         $progressBar = $("<div>", {
-            id: "progressBar"
+            class: "progressBar"
         });
         $bar = $("<div>", {
-            id: "bar"
+            class: "bar"
         });
         $progressBar.append($bar).appendTo($(".news-slider__owl .owl-dots .active"));
     }
@@ -31,78 +30,6 @@ $(function () {
         clearTimeout(tick);
         start();
     }
-
-    // $('.owl-articles').owlCarousel({
-    //     loop: true,
-    //     margin: 15,
-    //     autoplay: true,
-    //     lazyLoad: true,
-    //     autoplayHoverPause: true,
-    //     dots: false,
-    //     items: 1,
-    //     responsiveClass: true,
-    //     responsive: {
-    //         0: {
-    //             items: 1,
-
-    //             dots: false
-    //         },
-
-    //         600: {
-    //             items: 2
-    //         }
-    //     }
-    // })
-
-    // $('.owl-instagram').owlCarousel({
-    //     loop: true,
-    //     autoplay: true,
-    //     lazyLoad: true,
-    //     items: 1,
-    //     nav: false,
-    //     autoplayHoverPause: true,
-    //     dots: false,
-    //     responsiveClass: true,
-    //     responsive: {
-    //         1200: {
-    //             items: 4,
-    //             nav: false
-    //         },
-    //         600: {
-    //             items: 2,
-    //             nav: false
-    //         },
-    //         0: {
-    //             items: 1,
-    //             nav: false
-    //         }
-    //     }
-    // })
-
-    // $('.owl-tips').owlCarousel({
-    //     loop: true,
-    //     margin: 15,
-    //     autoplay: true,
-    //     autoplayHoverPause: true,
-    //     lazyLoad: true,
-    //     dots: false,
-    //     responsiveClass: true,
-    //     responsive: {
-    //         0: {
-    //             items: 1,
-    //             nav: false
-    //         },
-    //         600: {
-    //             items: 2,
-    //             nav: false
-    //         },
-    //         992: {
-    //             items: 3,
-    //             nav: false
-    //         }
-    //     }
-    // })
-
 
     const newsSliderOwl = $(".news-slider__owl");
 
@@ -133,7 +60,7 @@ $(function () {
         if (isPause === false) {
             percentTime += 1 / time;
             //reset timer
-            $("#bar").css({
+            $(".bar").css({
                 width: percentTime + "%"
             });
             //if percentTime is equal or greater than 100
@@ -153,10 +80,45 @@ $(function () {
         tick = setInterval(interval, 10);
     };
     newsSliderOwl.on('mouseover', function () {
-        isPause = true;
+        // isPause = true;
+        isPause = false;
     });
     newsSliderOwl.on('mouseout', function () {
         isPause = false;
     });
+
+
+
+
+
+
+
+
+
+    $('.owl-instagram').owlCarousel({
+        loop: true,
+        autoplay: true,
+        lazyLoad: true,
+        items: 1,
+        nav: false,
+        autoplayHoverPause: true,
+        dots: false,
+        responsiveClass: true,
+        responsive: {
+            1200: {
+                items: 4,
+                nav: false
+            },
+            600: {
+                items: 2,
+                nav: false
+            },
+            0: {
+                items: 1,
+                nav: false,
+                stagePadding: 48
+            }
+        }
+    })
 
 });

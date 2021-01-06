@@ -15,12 +15,6 @@ window.onload = function () {
 
 
 $(function () {
-    // const allLang = document.querySelectorAll(".header__lang-all .text");
-    // Array.from(allLang).forEach(element => {
-    //     element.addEventListener('click', () => {
-    //         document.querySelector('.header__lang-active-text').innerHTML = element.textContent;
-    //     });
-    // });
 
     $('input').focus(function () {
         $(this).parents('.form-group').addClass('focused');

@@ -548,6 +548,7 @@ input:-internal-autofill-selected {
 
 html,
 body {
+  background-color: #f3f7ff;
   margin: 0;
   padding: 0;
   -webkit-user-drag: none;

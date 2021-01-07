@@ -1170,6 +1170,312 @@ div {
     }
 }
 
+.page {
+
+    &__category {
+        font-size: $fontSizeBodyS;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        background: white;
+        text-align: center;
+        padding: 0.5rem 2rem;
+        box-shadow: $shadow-xl;
+        color: white;
+        display: block;
+        transition: $durationM;
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0px, 0px, 0px) rotate(0.0001deg) translateX(0);
+        transform-style: preserve-3d;
+        background: $clern-blue-gradient;
+
+        a {
+            position: relative;
+            z-index: 2;
+            transition: $durationM;
+        }
+
+        &::before {
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: $clern-green-gradient;
+            transition: $durationL;
+            border-top-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            z-index: 1;
+        }
+    }
+
+    &__author-date {
+        color: $clern-darkGrey;
+    }
+
+    &__author {
+        color: $clern-darkGrey;
+        transition: $durationM;
+
+        &:hover {
+            opacity: 0.9;
+            color: $clern-darkGrey;
+        }
+    }
+
+    &__time {
+        opacity: 0.5;
+    }
+
+    &__changer {
+        a {
+            color: $clern-darkGrey;
+            transition: $durationL;
+            display: block;
+
+            .page {
+                &__direction {
+                    font-size: $fontSizeBodyXS;
+                }
+
+                &__other-page-title {
+                    font-size: $fontSizeBodyL;
+                    color: $clern-blue;
+                    text-decoration: underline;
+                }
+            }
+
+            &:hover {
+                color: $clern-darkGrey;
+                text-decoration: none;
+
+                &.text-left {
+                    transform: translateX(1rem);
+                }
+
+                &.text-right {
+                    transform: translateX(-1rem);
+                }
+            }
+        }
+    }
+}
+
+.article {
+    &__heading {
+        color: $clern-lightGreen;
+        font-size: $fontSizeH1;
+    }
+
+    &__subheading {
+        font-size: $fontSizeH2;
+        color: $clern-lightGreen;
+    }
+
+    &__text {
+        color: $clern-darkGrey;
+        text-align: justify;
+        line-height: 1.5rem;
+        color: rgba(0, 0, 0, 0.8);
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased !important;
+        -moz-font-smoothing: antialiased !important;
+        text-rendering: optimizelegibility !important;
+        letter-spacing: .03rem;
+        opacity: 0.9;
+    }
+
+    &__quote {
+        color: $clern-blue;
+        font-size: $fontSizeBodyM;
+
+        &-decoration {
+            height: 2px;
+            background: $clern-blue;
+            margin-top: 0.8rem;
+            display: inline-block;
+        }
+    }
+
+    .double-columns {
+        columns: 2;
+    }
+}
+
+.social__icon {
+    color: white;
+    background-color: $clern-darkGrey;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    border-radius: 2px;
+    opacity: 0.2;
+    line-height: 2.1;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.25rem;
+    transition: $durationM;
+
+    &:hover {
+        color: $clern-blue;
+        background-color: $clern-blue;
+        opacity: 1;
+    }
+
+    svg {
+        width: 100%;
+    }
+}
+
+.comments-section {
+    font-size: $fontSizeBodyXS;
+
+    &__heading {
+        font-size: $fontSizeBodyL;
+        color: $clern-blue;
+    }
+
+    &__avatar {
+        border-radius: 50%;
+    }
+
+    &__date {
+        opacity: 0.5;
+    }
+
+    &__answer {
+        color: $clern-blue;
+
+        &:hover {
+            color: $clern-blue;
+        }
+    }
+
+    &__link {
+        color: $clern-darkGrey;
+
+        &:hover {
+            color: $clern-darkGrey;
+        }
+    }
+}
+
+
+.write-comment {
+    .form-group.focused {
+        .form-input {
+            box-shadow: 0 2px 0 0 $clern-blue;
+        }
+    }
+
+    .form-label {
+        color: #322c2e;
+        opacity: 0.5;
+        left: 15px;
+    }
+
+    .form-input {
+        box-shadow: 0 1px 0 0 rgba(25, 25, 25, 0.4);
+        color: #322c2e;
+        max-width: 100%;
+    }
+
+
+    &__btn {
+        z-index: 2;
+        color: white;
+        background: white;
+        font-size: $fontSizeBodyM;
+        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+        display: inline-block;
+        position: relative;
+        transition: $durationL;
+        border-radius: 200px;
+        text-transform: uppercase;
+        z-index: 1;
+        width: 200px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        outline: none;
+        border: none;
+
+        &-container {
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 200px;
+                z-index: 0;
+                left: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid $clern-blue;
+            border-radius: 200px;
+            z-index: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $clern-blue-gradient;
+            border-radius: 200px;
+            z-index: 1;
+            transition: $durationL;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            box-shadow: none;
+            outline: none;
+            border: none;
+
+            span {
+                color: $clern-blue;
+            }
+
+            &::after {
+                transform: scale(0) rotateX(40deg);
+            }
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+
+        span {
+            display: block;
+            position: relative;
+            z-index: 2;
+            color: white;
+            border-radius: 200px;
+        }
+    }
+
+}
 
 .footer {
     z-index: -1;

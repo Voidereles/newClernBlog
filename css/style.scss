@@ -1853,6 +1853,12 @@ div {
         top: 15%;
     }
 
+    .triple-news {
+        &__grid {
+            grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        }
+    }
+
 }
 
 @media (max-width:992px) {

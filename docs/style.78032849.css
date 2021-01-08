@@ -2678,6 +2678,10 @@ div::selection {
   .news-slider .owl-nav span {
     top: 15%;
   }
+  .triple-news__grid {
+    -ms-grid-columns: (minmax(125px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  }
 }
 
 @media (max-width: 992px) {
